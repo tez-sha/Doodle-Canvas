@@ -34,13 +34,13 @@ export class CanvasDrawComponent implements AfterViewInit {
 
   handleStart(ev) {
     this.lastX = ev.touches[0].pageX;
-    this.lastY = ev.touches[0].pageY;
+    this.lastY = ev.touches[0].pageY-50;
   }
 
   handleMove(ev) {
     let ctx = this.canvasElement.getContext('2d');
     let currentX = ev.touches[0].pageX;
-    let currentY = ev.touches[0].pageY;
+    let currentY = ev.touches[0].pageY-50;
 
     ctx.beginPath();
     ctx.lineJoin = "round";
