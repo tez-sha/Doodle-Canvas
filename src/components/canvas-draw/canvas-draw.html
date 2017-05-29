@@ -1,0 +1,19 @@
+
+<ion-toolbar id="top-toolbar">
+    <ion-buttons>
+        <button *ngFor="let color of availableColors" (click)="changeColor(color)" ion-button>{{color}}</button>
+        <button (click)="changeColor('#fff')" ion-button>Erase</button>
+    </ion-buttons>
+</ion-toolbar>
+<canvas #myCanvas (touchstart)="handleStart($event)" 
+(touchmove)="handleMove($event)" 
+(touchend)="handleEnd($event)"></canvas>
+<ion-toolbar id="bottom-toolbar">
+    <ion-buttons>
+        <button (click)="changeSize(5)" ion-button>small</button>
+        <button (click)="changeSize(10)" ion-button>medium</button>
+        <button (click)="changeSize(20)" ion-button>large</button>
+        <button (click)="changeSize(50)" ion-button>X large</button>
+        <button (click)="changeSize(200)" ion-button>XX large</button>
+    </ion-buttons>
+</ion-toolbar>
